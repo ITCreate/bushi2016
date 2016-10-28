@@ -1,0 +1,91 @@
+body {
+	margin: 0;
+}
+/*********************************************
+* .article-header
+**********************************************/
+.article-header-cover {
+	background-color: #1074bc;
+	width: 100%;
+	display: inline-block;
+}
+
+.article-header {
+	background-color: #e6f0f8;
+	color: #231f20;
+	padding: 40px 10px 10px 10px;
+	margin-left: 60px;
+	display: inline-block; 
+}
+
+h1.article-title, .writer-info{
+	border-bottom: solid 1px;
+}
+
+.article-title {
+	font-size: 32px;
+	font-weight: 200;
+	padding-right: 60px;
+}
+
+.writer-info {
+	margin-top: 60px;
+	font-size: 12px;
+}
+
+.writer-info::before {
+	content: "Written by\A";
+	white-space: pre;
+	font-size: 10px;
+}
+
+/*********************************************
+* .article-body
+**********************************************/
+.article-body.container {
+	margin: 20px 60px;
+	padding: 0;
+}
+.article-body section {
+	padding-bottom: 10px;
+}
+
+.article-body section h2::before{
+	content: "\A";
+	white-space: pre;
+	display: inline-block;
+	position: absolute;
+	top: -5px;
+	border: solid 1px;
+	width: 100px;
+	height: 8px;
+	background-color: #ffffff;
+}
+
+.article-body section::before::after{
+	border: solid 1px;
+	display: inline-block;
+	width: 100px;
+	height: 8px;
+}
+
+.article-body section h2{
+	position: relative;
+	border-top: solid 1px;
+	padding-top: 15px; 
+	font-weight: 200;
+}
+
+.article-body section p{
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+
+/*********************************************
+* bootstrap override
+**********************************************/
+.thumbnail .caption {
+	font-size: 10px !important;
+	padding: 4px !important;
+}
