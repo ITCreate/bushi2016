@@ -1,20 +1,26 @@
+html {
+	font-size: 10px;
+}
+
 body {
 	margin: 0;
+	-webkit-print-color-adjust: exact;
+	font-size: 1rem;
 }
+
 /*********************************************
 * .article-header
 **********************************************/
 .article-header-cover {
-	background-color: #1074bc;
 	width: 100%;
 	display: inline-block;
 }
 
 .article-header {
-	background-color: #e6f0f8;
 	color: #231f20;
 	padding: 40px 10px 10px 10px;
 	margin-left: 60px;
+	width: 500px;
 	display: inline-block; 
 }
 
@@ -39,53 +45,70 @@ h1.article-title, .writer-info{
 	font-size: 10px;
 }
 
-/*********************************************
-* .article-body
-**********************************************/
-.article-body.container {
-	margin: 20px 60px;
-	padding: 0;
-}
-.article-body section {
-	padding-bottom: 10px;
+
+.block {
+	padding: 0 60px;
 }
 
-.article-body section h2::before{
+/*
+* 記事内装飾
+*/
+
+.img-col img {
+	max-height: 120px; 
+}
+
+h2::before{
 	content: "\A";
 	white-space: pre;
 	display: inline-block;
 	position: absolute;
 	top: -5px;
-	border: solid 1px;
-	width: 100px;
+	width: 50px;
 	height: 8px;
-	background-color: #ffffff;
 }
 
-.article-body section::before::after{
-	border: solid 1px;
+h2::after {
+	content: "";
 	display: inline-block;
-	width: 100px;
+	position: absolute;
+	top: -5px;
+	left: 50px;
+	background-color: #ffffff;
+	width: 5px;
 	height: 8px;
 }
 
-.article-body section h2{
+h2{
 	position: relative;
 	border-top: solid 1px;
 	padding-top: 15px; 
 	font-weight: 200;
+	margin-top: 40px;
+	margin-bottom: 15px;
+	font-size: 2.5rem;
 }
 
-.article-body section p{
-	font-size: 12px;
-	line-height: 18px;
+h3{ 
+	font-weight: 200;
+	font-size: 2rem;
+}
+
+p{
+	line-height: 20px;	
 	margin-bottom: 16px;
 }
 
-/*********************************************
-* bootstrap override
-**********************************************/
+.img-col {
+	text-align: center;
+}
+
+.thumbnail {
+	display: inline-block !important;
+}
+
 .thumbnail .caption {
 	font-size: 10px !important;
 	padding: 4px !important;
+	
 }

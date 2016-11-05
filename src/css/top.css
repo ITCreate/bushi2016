@@ -1,0 +1,120 @@
+/*
+* title
+*/
+
+.title {
+	position: absolute;
+	top: 180px;
+	width: 100%;
+}
+
+.title-top {
+	background-color: #e6f0f8 !important;
+	font-size: 48px;
+	font-weight: 200;
+	padding: 16px 40px;
+}
+
+.title-bottom {
+	background-color: #1074bc !important;
+	color: #ffffff !important;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 40px;
+}
+
+.title-logo {
+	position: absolute;
+	top: -12px;
+	right: 58px;
+	width: 6.17cm;
+	height: 5.49cm;
+}
+
+.title-logo img {
+	width: 100%;
+}
+/*
+* article-list
+*/
+.article-list {
+	position: absolute;
+	bottom: 80px;
+	left: 80px;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+/*
+* fream
+*/
+
+.fream {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.fream-line {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-left: solid 20px #1074bc;
+	border-bottom: solid 20px #1074bc;
+	box-sizing: border-box;
+}
+
+.corner.top-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.corner.bottom-left {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+.triangle {
+	position: absolute;
+}
+
+.triangle.in {
+	z-index: 1;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.triangle.out {
+	z-index: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    
+}
+
+.triangle.in {
+	border-top: 25px solid #e6f0f8;
+    border-right: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+    border-left: 25px solid #e6f0f8;
+}
+
+.triangle.out {
+	border-top: 40px solid #1074bc;
+    border-right: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+    border-left: 40px solid #1074bc;
+}
+
+.corner.bottom-left {
+	transform: rotateZ(-90deg)
+}

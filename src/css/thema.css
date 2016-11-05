@@ -1,0 +1,80 @@
+
+/*blue*/
+.blue .article-header-cover, 
+.blue  h2::before {
+	background-color: #1074bc !important;
+}
+
+.blue  h2::before {
+	border: solid 1px #062C47;
+}
+
+.blue .article-header {
+	background-color: #e6f0f8 !important;
+}
+
+/*red*/
+.red .article-header-cover, 
+.red  h2::before {
+	background-color: #BA1073 !important;
+}
+
+.red  h2::before {
+	border: solid 1px #44062A;
+}
+
+.red .article-header {
+	background-color: #F7E6EF !important;
+}
+
+/*green*/
+.green .article-header-cover, 
+.green  h2::before {
+	background-color: #10BA57 !important;
+}
+
+.green  h2::before {
+	border: solid 1px #064420;
+}
+.green .article-header {
+	background-color: #E6F7ED !important;
+}
+
+/*orange*/
+.orange .article-header-cover, 
+.orange  h2::before {
+	background-color: #BA5710 !important;
+}
+
+.orange  h2::before {
+	border: solid 1px #442006;
+}
+.orange .article-header {
+	background-color: #F7EDE6 !important;
+}
+
+/*purple*/
+.purple .article-header-cover, 
+.purple  h2::before {
+	background-color: #7710B7 !important;
+}
+
+.purple h2::before {
+	border: solid 1px #2B0542;
+}
+.purple .article-header {
+	background-color: #F1E6F7 !important;
+}
+
+/*yellow*/
+.yellow .article-header-cover, 
+.yellow  h2::before {
+	background-color: #B4B710 !important;
+}
+
+.yellow h2::before {
+	border: solid 1px #414205;
+}
+.yellow .article-header {
+	background-color: #F6F7E6 !important;
+}

@@ -1,0 +1,47 @@
+@page {
+	width: 182mm;
+	height: 257mm;
+	margin: 0mm;
+}
+
+/*********************************************
+* .page
+**********************************************/
+.page {
+	width: 182mm;
+	height: 257mm;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.page-header {
+	padding: 40px 20px 0px 20px;
+	margin: 0;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.left .page-header {
+	text-align: left;
+}
+
+.right .page-header {
+	text-align: right; 
+	
+}
+
+.page-num {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 20px;
+	background-color: #f0f0f0 !important;
+}
+
+.left .page-num {
+	text-align: left;
+}
+
+.right .page-num {
+	text-align: right;
+}

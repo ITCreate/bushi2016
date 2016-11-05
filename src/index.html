@@ -1,0 +1,497 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/page.css">
+	<link rel="stylesheet" href="./css/thema.css">
+	<link rel="stylesheet" href="./css/top.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--
+****************************表紙***********************************
+-->
+	<div class="page none-decration">
+		<div class="title">
+			<div class="title-top">
+				ITCreate Club<br>
+				2016/Vol.02
+			</div>
+			<div class="title-bottom">
+				大阪情報コンピュータ専門学校<br>
+				ITCreate 部誌
+			</div>
+			<div class="title-logo"> 
+				<img src="./img/Sticker.png" alt="">
+			</div>
+		</div>
+		<ul class="article-list">
+		</ul>
+		<div class="fream">
+			<div class="fream-line"></div>
+			<div class="corner top-left">
+				<div class="triangle in"></div>
+				<div class="triangle out"></div>	
+			</div>
+			<div class="corner bottom-left">
+				<div class="triangle in"></div>
+				<div class="triangle out"></div>	
+			</div>
+		</div>
+	</div>	
+
+<!--
+****************************表紙終了***********************************
+-->
+
+<!--
+****************************甲村***********************************
+-->
+	<article class="blue">
+		<div class="page">
+
+		<div class="article-header-cover">
+			<div class="article-header">
+				<h1 class="article-title">RFC1149 - 鳥類キャリアによるIPデータグラムの伝送規格</h1>
+				<div class="writer-info">甲村 迅 - ネットワークセキュリティ専攻 1年</div>
+			</div>
+		</div>
+		<div class="block"><!--block-->
+		<h2 id="-">概要</h2>
+		<p>鳥類キャリアによるIPデータグラムの伝送規格(英: IP over Avian Carrier, IPoAC)とは、1990年4月1日にIETFがRFC1149として定義したジョーク規格です。その名の通り、伝送媒体に鳩を中心とした鳥類を用いてパケットを伝送する手順を定めています。伝書鳩のようなもの(というか伝書鳩)です。</p>
+		<h2 id="-">伝送手順</h2>
+		<div class="row">
+			<div class="col-xs-6">
+				<p>RFCによれば</p>
+				<ol>
+					<li>紙巻きに16進数でビットを印字し、オクテットごとに白い部分と黒い部分で区切る</li>
+					<li>紙巻きを鳥類キャリアの脚に巻き付ける</li>
+					<li>飛ばす</li>
+				</ol>
+				<p>の3つの手順が記されていますが、鳥類を任意の地点に飛行させる事は困難です。 伝書鳩においては下準備として宛先地点を以下の方法で設定する必要があります。
+				</p>
+				<ul>
+					<li>宛先地点を巣と認識させる (巣を作らせる, 鳩舎を作る)</li>
+				</ul>
+				<p>巣を認識させることによって鳥類キャリアは優れた帰巣本能で宛先に直行できます。 ただしIPoACはベストエフォートな為、多少のパケットロス(行方不明)は許容しなければなりません。 また帯域幅は足の長さに左右され、標準的なMTUは256ミリグラムでキャリアの年齢によって増加していきます。
+				</p>
+				<p>			
+			</div>
+			<div class="col-xs-6 img-col">
+				<div class="thumbnail">
+					<img src="http://puu.sh/rWbmr.jpg" alt="フレームフォーマット">
+					<div class="caption">フレームフォーマット</div>
+				</div>
+				<div class="thumbnail">
+					<img src="http://puu.sh/rWbg5.jpg" alt="L3PDUを脚に巻き付けている鳩">
+					<div class="caption">L3PDUを脚に巻き付けている鳩</div>
+				</div>
+			</div>
+		</div>
+		</div><!--block-->
+		</div><!--page-->
+
+		<div class="page">
+		<div class="block"><!--block-->
+		<h2 id="-">利点</h2>
+		<p>IPoACには一般に利用されるイーサネットと比べて様々な利点があります。</p>
+		<p>衝突 : IPoACによる通信では衝突がほぼ発生しません。 イーサネット規格は伝送路が1次元空間であるのに対し、鳥類キャリアは3次元空間を自由に飛び回ることが可能なので、衝突の発生を最小限に抑える事が可能です。
+		</p>
+		<p>衝突回避 : イーサネットではCSMA/CDによって衝突の検知, 再送制御を行いますが、 鳥類キャリアには衝突回避機能がデフォルト(本能)で備わっています。 広い伝送路と本機能によって衝突の発生を最小限に抑えられます。
+		</p>
+		<div class="row">
+			<div class="col-xs-6">
+				<p>伝送距離 : イーサネットでの最大伝送距離は、長いものでは150km(1000BASE-LHB)ほどありますが、鳥類キャリアは1000km以上離れていても伝送が出来ると言われています(キャリアの種類による)。 なお、鳥類キャリアとしての要件を満たすかは不明ですが、キョクアジサシという鳥は32000km飛行し、1年のうちに北極圏と南極圏の間を往き来するようです。
+				</p>
+			</div>
+			<div class="col-xs-6 img-col">
+				<div class="thumbnail">
+					<img src="http://puu.sh/rWbAg.jpg" alt="キョクアジサシ">
+					<div class="caption">キョクアジサシ</div>
+				</div>
+			</div>	
+		</div>
+		<p>その他 : ワーム(イモ虫)の検知・駆除機能を備えています。 またキャリアは自己修復機能も備えていますが、修復には時間を要します。
+		</p>	
+		<h2 id="-">問題点</h2>
+		<p>鳥類キャリアには様々な利点がありますが、問題点も複数あります。</p>
+		<p>超高遅延 : 想像に難くないですが鳥類キャリアはレスポンスが極めて悪いです。 2001年4月、ノルウェーのLinuxユーザグループ(BLUG)がIPoACを実装し、5km離れた宛先に9個のパケット(9羽の鳩)を用いてpingを送信する実験を行いました。
+			pingが帰ってきたのは1時間〜1時間半後で、帰ってきたのは4羽のみでした。 よって
+			<strong>損失率55%, 応答時間3000秒(3,000,000ms)〜6000秒(6,000,000ms)以上</strong>との結果により、実用に耐えないと結論づけています。</p>
+		<p>Multicast, Broadcast不可 : IPパケットは通常フラッディングによる分身が可能ですが、鳩は物理的に分身が出来ないので、ブロードキャストの定義はされていません。 よって利用できるネットワークタイプはポイントツーポイントに限られます(NBMAも可能？)。
+		</p>
+		<p>BroadcastStormによるパケットの損失 : ブロードキャストが定義されていない事は前述の通りですが、ブロードキャストストーム<strong>(嵐)</strong>によってパケットが失われる可能性があります。</p>
+		</div><!--block-->
+		</div><!--page-->
+
+		<div class="page">
+		<div class="block"><!--block-->
+		<h2 id="-">おわりに</h2>
+		<p>初部誌にこんな記事を書いて怒られないかと震えていますが、IPoACについて一通りの説明をさせていただきました。間違った事を書いていると思うので、見つけた方はこっそり教えていただけると幸いです。 ちなみに鳥類キャリアが関わるRFCは
+		</p>
+		<ul>
+			<li>RFC1149 (鳥類キャリアによるIPデータグラムの伝送規格)</li>
+			<li>RFC2322 (洗濯バサミDHCPによるIPアドレスの管理手法)</li>
+			<li>RFC2549 (サービス品質(QoS)を備えたIPoAC)</li>
+			<li>RFC6214 (IPv6のためのRFC1149の適応)</li>
+		</ul>
+		<p>の4つがあるので、気になる方は読んでみてください。 最後まで読んでいただきありがとうございました。
+		</p>
+		<p>RFC1149(英): <a href="https://tools.ietf.org/html/rfc1149">https://tools.ietf.org/html/rfc1149</a> <br>
+		RFC1149(和): <a href="http://www.chibutsu.org/iorin/rfc/rfc1149fr.html">http://www.chibutsu.org/iorin/rfc/rfc1149fr.html</a><br>		
+		RFC1149(和): <a href="http://www.asahi-net.or.jp/~aa4t-nngk/rfc1149.html">http://www.asahi-net.or.jp/~aa4t-nngk/rfc1149.html</a></p>
+		<p>ところで、&quot;鳥類キャリアは実用に耐えない&quot;と上で書いていましたが、
+			<strong>伝送速度で伝書鳩に負けるISP</strong>(*注)があるらしいので、もしかしたら実用性があるのかもしれませんね。 ないですね、失礼しました。
+		</p>
+		<p>*注: 「南アの通信会社、データ伝送の速度で伝書鳩に敗北」 REUTERSから</p>
+		</div><!--block-->
+		</div><!--page-->
+	</article>
+
+<!--
+****************************甲村終了***********************************
+-->
+
+<!--
+****************************竹川***********************************
+-->
+<article class="red">
+	<div class="page">
+		<div class="article-header-cover">
+			<div class="article-header">
+				<h1 class="article-title">未定</h1>
+				<div class="writer-info">竹川 翔悟 - ITスペシャリスト専攻 1年</div>
+			</div>
+		</div>
+		<div class="block">
+		<h2 id="-">初めまして</h2>
+		<p>　KOFの作品完成が部誌の〆切に間に合いませんでした1年生の<strong>竹川</strong>と申します。<br>ついでにこの部活（ITクリエイト部）の入部条件（基本情報技術者試験）にも落ちたので実は<strong>部員でもない人</strong>です。（2016/11/3現在）<br>入学半年にしてOBです。（てへ）</p>
+		<h2 id="-">作品について</h2>
+		<p>　作品は <strong>jsoup</strong> というjavaでHTMLの解析を行うライブラリと、<br><strong>mecab</strong> という形態素解析エンジンを使用したwebスクレイピングなものが挫折してなければ展示されていると思います。<br>			思い立った理由としては、「うんこ」って入力して「糞」って返って来たら面白いな〜って思ってました。疲れてるときに面白いと感じてしまったことを実行に移してしまい多少の後悔はあります。</p>
+		<h2 id="-">使用言語</h2>
+		<p>　今回javaのライブラリを使用してますが、<strong>scala</strong> で書いてます。 なぜscalaで書いているかと言いますと、部活の新入生歓迎会にて使わなくなった技術書をジャンケンで勝った人に譲るという場面がありました。ジャンケンする人は挙手参加型なのですが「なんかみんなこの本欲しそうだな〜」と思い適当に参加したら一人勝ちしてしまい、scalaの技術書（コップの本だよ！）を手に入れてしまいました。
+			<del>顧問に「その本もらって勉強しなかったら先輩達の反感を買うことになるぞ」と言われたので</del>せっかく自由にプログラムを書けるいい機会なのでscalaで書くことにしました。</p>
+		<div style="page-break-before:always"></div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="block">
+		<h2 id="-">内容</h2>
+		<p>　コードの内容としましては、jsoupさんにURLからHTMLを取ってきてもらい、そのHTMLから文字列を取得し、</p>
+<pre><code>def HTMLのやーつ: String = {
+  //検索文字
+    val goo = io.StdIn.readLine()
+  //URLからHTMLを収納
+    val doc: Document = Jsoup.connect(&quot;https:けんさくさいと&quot; + goo + &quot;+類義語&quot;).get()
+  //bodyの文字列を取り出す
+    val text: String = doc.body().text()
+}
+</code></pre>
+		<p>その後mecab様にお願いして解析してもらってあんなことやこんなことします（制作途中）</p>
+		<h2 id="-">最後に</h2>
+		<p>　今回始めて自分一人で自由にプログラムをするということをしました。 プログラム経験で言うと授業でC言語を受けているぐらいなので、C言語と比べてscalaではあんなことができるこんなことができると調べても調べても出てくるので知識が増える喜びを感じることが出来ました。
+			<br>まだまだ初心者なのでmecabの導入で3,4日（計15時間くらい）かかったりしましたが、今回の経験はとても刺激になったのでぜひ来年もまたscalaでものを作りたいです。</p>
+		</div>
+	</div>
+</article>
+
+<!--
+****************************竹川終了***********************************
+-->
+
+<!--
+***************************山崎***********************************
+-->
+<article class="green">
+	<div class="page">
+		<div class="article-header-cover">
+			<div class="article-header">
+				<h1 class="article-title">Vue.jsのすヽめ</h1>
+				<div class="writer-info">山崎 好洋 - ITスペシャリスト専攻 3年</div>
+			</div>
+		</div>
+		<div class="block">
+			<h2 id="-">自己紹介</h2>
+			<p>初めましてITCreate部 部長の山崎です。普段Webのフロントエンドやサーバサイドを触ってます。 FrontendConference2015やGrandFrontEnd2016,Scala関西サミットで学生スタッフのリーダーとかやってました。
+			</p>
+			<h2 id="-javascript-vue-js">シンプルなJavaScriptフレームワークVue.js</h2>
+			<div class="row">
+				<div class="col-xs-7">
+					<p>一年ほど前、いつまでもjQueryだけではダメだと思いAngularやReactを勉強しようと思いました。 しかしディレクティブやディスパッチャーなどわからない単語が多かったり、公式ページが英語だったりと壁が多く挫折してしまいました。 そんな時に出会ったのがVue.jsです。
+					</p>
+				</div>
+				<div class="col-xs-5 img-col">
+					<div class="thumbnail">
+						<img src="https://drive.google.com/uc?export=view&id=0B4ZiWZMCdy8lRTk0WVlBLWRkWk0" alt="">
+						<div class="caption">
+							Vue.js公式サイト(https://jp.vuejs.org/)
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 id="javascript-">JavaScriptフレームワークの入門に最適！！</h2>
+			<p>いつも周りの人におすすめしているのですが、Vue.jsの基本的な役割は双方向バインディングだけとシンプルなフレームワークなのでJavaScriptフレームワーク初心者の方でも学習しやすいです。 また公式ドキュメントの和訳がしっかりしているので英語が苦手な方でも大丈夫です。
+			</p>
+			<p>表示したい部分には{{ 変数 }}、フォームにv-mode=&quot;変数&quot; とするだけで双方向バインディングができます。
+			</p>
+		</div>
+	</div>
+	<div class="page">
+		<div class="block">	
+				<pre><code class="lang-main.js">import Vue from &#39;vue&#39;
+
+const app = new Vue({
+    el: &#39;#app&#39;,
+    data: {
+        msg: &#39;Hello!&#39;
+    }
+})
+</code></pre>
+			<pre><code class="lang-index.html">&lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        {{ msg }}
+        &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>			
+			<h2 id="-">柔軟な拡張性</h2>
+			<p>Vue.jsは双方向バインディングのサポートしかしてないのですが、公式ライブラリなど使用することで様々な規模のアプリケーションを作成することができます。</p>
+			<h3 id="spa">SPA</h3>
+			<p>vue-routerを利用することで最近流行りのシングルページアプリケーションを作成することができます。</p>
+			<pre><code>npm install vue-router
+</code></pre>
+			<h3 id="flux-">Fluxアーキテクチャ</h3>
+			<p>規模が大きくなり複雑なアプリケーションになった場合はFluxライクなライブラリVuexを使います。</p>
+			<pre><code>npm install vuex
+</code></pre>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="block">
+			<h2 id="-vue-">テンプレート、スタイル、スクリプトをまとめてくれるvueファイル</h2>
+			<p>Vue.jsでは.vueという拡張子のファイルを使用することができます。 コンポーネントの要素であるテンプレート、スタイル、スクリプトを一つのファイルにまとめることができます。
+			</p>
+			<pre><code class="lang-App.vue">&lt;template&gt;
+    ここにテンプレート
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+    ここにスタイル
+    scopedをつけるとこのコンポーネント内だけで有効なCSSになります。
+&lt;/style&gt;
+
+&lt;script&gt;
+    ここにスクリプト
+&lt;/script&gt;
+</code></pre>
+			<p>ただvueファイルを使用する場合はwebpackやbrowserifyを利用する必要があります。</p>
+			<h2 id="-vue-js-">コマンド一つでVue.jsを始める</h2>
+			<p>初心者の壁になる一つがGulpなどのタスクランナーやwebpackなどのビルドツールです。 フレームワークを使って何か作りたいのにツールの設定方法などを勉強しないといけないのはもどかしいですよね。 Vue.jsではwebpackの設定やディレクトリ構成などをコマンド一つでしてくれるvue-cliというものがあるのですぐにVue.jsを使うことができます。
+			</p>
+			<pre><code>npm install -g vue-cli
+</code></pre>
+			<pre><code>vue init webpack-simple#1.0 プロジェクト名
+</code></pre>
+			<p>※webpack-simpleのあとに#1.0とつけない場合はvue2.0が入ります。</p>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="block">
+			<h2 id="vue-js-">Vue.jsが新しく！</h2>
+			<p>2016/10/1にVue.jsのバージョンが1.0から2.0になりました！ドキュメントの和訳はまだなのですが（11月中ぐらいには和訳されるらしい） Vue2.0では仮装DOMやサーバーサイドレンダリングなどが実装され速度の向上やSPAならではのSEO問題が解決されました。
+				またVue1.0との互換性がよくほぼそのままのコードでVue2.0を動かすことができます。
+			</p>
+			<h2 id="-">まとめ</h2>
+			<p>シンプルで学習しやすいVue.jsですが万能というわけではありません。Vue.jsからJavaScriptフレームワークを学んでもらい慣れたあとAngulerやReactなどのフレームワークを学習するのがいいのではと私は思っています。</p>
+			<p>今回KOFに出展しているMeetMapという作品もVue.jsを使用していますので是非見に来てください。 また私のGitHubにてVue.jsで作ったToDoアプリ、Vue2.0のSPAアプリを公開しているので学習の参考に使っていただけるとありがたいです。
+			</p>
+			<p>ToDoアプリ:<a href="https://github.com/44x1carbon/todo-vue">https://github.com/44x1carbon/todo-vue</a><br> 
+			SPAアプリ:<a href="https://44x1carbon.github.io/vue2-spa/#/search">https://44x1carbon.github.io/vue2-spa/#/search</a></p>
+		</div>
+	</div>
+	</article>
+<!--
+***************************山崎終了***********************************
+-->
+
+<!--
+***************************古賀終了***********************************
+-->
+<article class="yellow">
+		<div class="page">
+			<div class="article-header-cover">
+				<div class="article-header">
+					<h1 class="article-title">今年の活動について語ってみる</h1>
+					<div class="writer-info">古賀 友輝 - 情報ネットワークセキュリティ専攻 3年</div>
+				</div>
+			</div>
+			<div class="block">
+				<h2> 自己紹介 </h2>
+				<div class="row">
+					<div class="col-xs-8">
+						<p>
+							初めまして。ITCreate部員 2年生の古賀 友輝といいます。
+							Twitterとかでは <strong>@ahaha0807_alg （がっちゃん）</strong>で活動しています。
+						</p>
+						<p>
+							今年の部誌では今年の（個人的）活動についてと出展作品の話をしたいと思います。
+						</p>
+					</div>
+					<div class="col-xs-4 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wQ2RsOUVERTNHbVk" alt="" style="height: 80px;">
+						</div>
+					</div>
+				</div>
+				<h2 id="-">今年の(個人的)活動報告</h2>
+				<h3 id="grand-frontend-osaka-">Grand FrontEnd Osaka のハッカソン</h3>
+				<p>8/27, 28 に GrandFront の大阪イノベーションハブで開催された Grand FrontEnd Osaka にハッカソン参加者として参加してきました！</p>
+				<p>そこでは「あなたにとっての初めての技術体験」というテーマで開発を行っており、私は「 <strong>kintone + Vue.js</strong> をつかって <strong>グループでの旅行時、宿を取るときに相談する場を提供する</strong> アプリ」というものを開発しました。</p>
+				<p>
+					JavaScript で別サイトの WebAPI を叩くことができない <strong>クロスオリジンリソースシェアリング(CORS)</strong> に四苦八苦したり、デザインに悩んだりと苦労しましたが、 cybozu 株式会社の竹内さんと太田さんに kintone API 以外（楽天トラベルAPIなど）についてまで教えていただき、なんとか完成させることが出来ました。<br>
+					結果、見事優秀賞をいただけました…！
+				</p>
+				
+				<p>以下、作品のスクリーンショットです！
+				URLも載せようと思ったのですが、セキュリティ的によろしくない部分が見つかったので、今は公開しない方向でいます。
+				いずれ GitHub ( <a href="https://github.com/ahaha0807">https://github.com/ahaha0807</a> )にて公開しようと思っていますので、よろしければフォロー等お願いします！</p>
+
+			</div>
+		</div>
+
+		<div class="page">
+			<div class="block">
+				<h2>作品スクリーンショット</h2>
+				<div class="row">
+					<div class="col-xs-6 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wWUluMmQ3Y1I5ZWc" alt="" style="height: 200px">
+							<div class="caption">登録画面(作成したView)</div>			
+						</div>
+					</div>
+					<div class="col-xs-6 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wUC11STFrMlFaeWc" alt="" style="height: 200px">
+							<div class="caption">候補一覧画面(kintone</div>			
+						</div>
+					</div>
+					<div class="col-xs-6 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wOHd4Z2N4eXQwMms" alt="" style="height: 200px">
+							<div class="caption">候補ホテルディスカッション画面(kintone)</div>			
+						</div>
+					</div>
+				</div>			
+				<h2 id="-java-">技術系バイトを始めて Java を書くように</h2>
+				<p>今年の 4月からとある IT企業でアルバイトをさせていただくようになって、そこで Java を使っているため、個人的な趣味でも Java を使った Web サーバーを書いたりするようになりました。
+				それまで JavaScript しか書いていなかったのですが、お固い Java を書くようになって、オブジェクト指向とはなんぞや。だったり、どんなメソッド名にすれば後で見やすいコードになるのかとかを考えるようになり、現在進行形でものすごく成長している気がします…！</p>			
+			</div>
+		</div>
+
+		<div class="page">
+			<div class="block">
+				<h2 id="-">あちこちの勉強会に参加してました！</h2>
+				<p>勉強会に参加することの楽しさを知って以来、いろいろな分野の勉強会に参加したり、学生スタッフをさせて頂いていました！
+				おかげさまでMyノートPCがステッカーでうめつくされるようになりました！</p>
+				<div class="row">
+					<div class="col-xs-6 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wNTdzaVV1d1FXdkk" alt=""></p>
+							<div class="caption">びふぉー</div>			
+						</div>
+					</div>
+					<div class="col-xs-6 img-col">
+						<div class="thumbnail">
+							<img src="https://drive.google.com/uc?export=view&amp;id=0B60Lm0vxJx6wLWQ3azUtQ0Y5MVU" alt=""></p>
+							<div class="caption">あふたー</div>			
+						</div>
+					</div>
+				</div>
+				<h2 id="-">出展作品紹介</h2>
+				<h3 id="-">概要</h3>
+				<p>今回出展させていただいたのは、 「 <strong>BookMark Binder</strong> 」という、Webアプリです。</p>
+				<p>これは、 「 <strong>お気に入りのリンクをファイルに出力するWebアプリ</strong> 」で、画面のフォームからお気に入りのリンクと付けたい名前を記述して登録するだけでファイルにお気に入りのリンクを出力することができます。</p>
+				<p>アプリによって出力されたファイルを画面から読み込むことでお気に入りを画面に表示させてお気に入りのリンクを利用できます。</p>
+				<h4 id="-">機能一覧</h4>
+				<ul>
+					<li>お気に入りを登録する</li>
+					<li>お気に入りの一覧をファイルに出力する</li>
+					<li>ファイルからお気に入りの一覧を読み出すことが出来る</li>
+				</ul>
+				<h3 id="-">使用した技術</h3>
+				<ul>
+					<li>React.js</li>
+					<li>jQuery(アニメーション関係のみ)</li>
+					<li>JavaScript</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page">
+			<div class="block">
+				<h3 id="-">なぜ作ったの？</h3>
+				<p>常々思っていた、下記の問題を解決したいと思って作りました</p>
+				<ol>
+				<li>複数のブラウザを使う身からするとお気に入りが共有できない</li>
+				<li>勉強した時に使ったWebサイトを <strong>まとめて共有・保存</strong> しておきたいときにもう一度リンクを探すのが大変</li>
+				<li><strong>ナイショのお気に入り</strong> とかを作りたいときに家族共有PCとかだと作れない</li>
+				</ol>
+				<h4 id="-">どうやって解決したか</h4>
+				<ul>
+				<li>1 =&gt; ファイル化するので、各ブラウザでお気に入りファイルを読みこめば良い</li>
+				<li>2 =&gt; 開いていたタブのリンクをファイルに出力してそのファイルを Slack や GitHub などで共有するようにすればOK</li>
+				<li>3 =&gt; 出力したファイルを誰にも見られないところに保存しておけばOK…</li>
+				</ul>
+				<h3 id="-">これから追加したい機能</h3>
+				<ul>
+				<li>お気に入りを編集する機能</li>
+				<li>お気に入りを削除する機能</li>
+				<li>お気に入りに対してコメントを付ける機能</li>
+				</ul>
+				<h3 id="-">詰まった点・苦労した点</h3>
+				<ul>
+				<li>React の jsx の記法に悩まされました…</li>
+				<li>この this(props) は何が入ってるんや…</li>
+				</ul>
+				<h2 id="-">まとめ</h2>
+				<p>出展作品については、初めて React.js を触ったので、React のいいところをきちんと利用できてはいないのですが、ところどころ「あ、これは Reactで書いていてよかった」と思うようなところにも気づけたので大きな収穫だったと思います！</p>
+				<p>また、JavaScriptからファイルを書き出すことが出来ることを知れて <strong>まだまだ利用できる範囲</strong> があるんじゃないかという期待に胸を膨らませています…！</p>
+				<p>他にも、気になる技術として今後、 <strong>electron</strong> を触りたいと思っています！</p>
+				<p>いずれ GitHub ( <a href="https://github.com/ahaha0807">https://github.com/ahaha0807</a> ) や Qiita ( <a href="http://qiita.com/ahaha0807_alg">http://qiita.com/ahaha0807_alg</a> )で活動報告とか使ってみた記録とかをあげようと思います！</p>
+				<p>よろしくお願いします！</p>
+			</div>
+		</div>
+	</article>
+<!--
+***************************古賀終了***********************************
+-->
+
+<!--
+***************************背表紙***********************************
+-->
+	<div class="page none-decration">
+		<div class="fream">
+			<div class="fream-line"></div>
+			<div class="corner top-left">
+				<div class="triangle in"></div>
+				<div class="triangle out"></div>	
+			</div>
+			<div class="corner bottom-left">
+				<div class="triangle in"></div>
+				<div class="triangle out"></div>	
+			</div>
+		</div>
+	</div>		
+<!--
+***************************背表紙終了***********************************
+-->
+	<script src="./js/pagenation.js"></script>
+
+</body>
+
+</html>
