@@ -1,0 +1,39 @@
+<article class="red">
+	<div class="page">
+		<div class="article-header-cover">
+			<div class="article-header">
+				<h1 class="article-title">未定</h1>
+				<div class="writer-info">竹川 翔悟 - ITスペシャリスト専攻 1年</div>
+			</div>
+		</div>
+		<div class="block">
+		<h2 id="-">初めまして</h2>
+		<p>　KOFの作品完成が部誌の〆切に間に合いませんでした1年生の<strong>竹川</strong>と申します。<br>ついでにこの部活（ITクリエイト部）の入部条件（基本情報技術者試験）にも落ちたので実は<strong>部員でもない人</strong>です。（2016/11/3現在）<br>入学半年にしてOBです。（てへ）</p>
+		<h2 id="-">作品について</h2>
+		<p>　作品は <strong>jsoup</strong> というjavaでHTMLの解析を行うライブラリと、<br><strong>mecab</strong> という形態素解析エンジンを使用したwebスクレイピングなものが挫折してなければ展示されていると思います。<br>			思い立った理由としては、「うんこ」って入力して「糞」って返って来たら面白いな〜って思ってました。疲れてるときに面白いと感じてしまったことを実行に移してしまい多少の後悔はあります。</p>
+		<h2 id="-">使用言語</h2>
+		<p>　今回javaのライブラリを使用してますが、<strong>scala</strong> で書いてます。 なぜscalaで書いているかと言いますと、部活の新入生歓迎会にて使わなくなった技術書をジャンケンで勝った人に譲るという場面がありました。ジャンケンする人は挙手参加型なのですが「なんかみんなこの本欲しそうだな〜」と思い適当に参加したら一人勝ちしてしまい、scalaの技術書（コップの本だよ！）を手に入れてしまいました。
+			<del>顧問に「その本もらって勉強しなかったら先輩達の反感を買うことになるぞ」と言われたので</del>せっかく自由にプログラムを書けるいい機会なのでscalaで書くことにしました。</p>
+		<div style="page-break-before:always"></div>
+		</div>
+	</div>
+	<div class="page">
+		<div class="block">
+		<h2 id="-">内容</h2>
+		<p>　コードの内容としましては、jsoupさんにURLからHTMLを取ってきてもらい、そのHTMLから文字列を取得し、</p>
+<pre><code>def HTMLのやーつ: String = {
+  //検索文字
+    val goo = io.StdIn.readLine()
+  //URLからHTMLを収納
+    val doc: Document = Jsoup.connect(&quot;https:けんさくさいと&quot; + goo + &quot;+類義語&quot;).get()
+  //bodyの文字列を取り出す
+    val text: String = doc.body().text()
+}
+</code></pre>
+		<p>その後mecab様にお願いして解析してもらってあんなことやこんなことします（制作途中）</p>
+		<h2 id="-">最後に</h2>
+		<p>　今回始めて自分一人で自由にプログラムをするということをしました。 プログラム経験で言うと授業でC言語を受けているぐらいなので、C言語と比べてscalaではあんなことができるこんなことができると調べても調べても出てくるので知識が増える喜びを感じることが出来ました。
+			<br>まだまだ初心者なのでmecabの導入で3,4日（計15時間くらい）かかったりしましたが、今回の経験はとても刺激になったのでぜひ来年もまたscalaでものを作りたいです。</p>
+		</div>
+	</div>
+</article>

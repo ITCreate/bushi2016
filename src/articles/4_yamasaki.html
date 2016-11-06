@@ -1,0 +1,110 @@
+<article class="green">
+	<div class="page">
+		<div class="article-header-cover">
+			<div class="article-header">
+				<h1 class="article-title">Vue.jsのすヽめ</h1>
+				<div class="writer-info">山崎 好洋 - ITスペシャリスト専攻 3年</div>
+			</div>
+		</div>
+		<div class="block">
+			<h2 id="-">自己紹介</h2>
+			<p>初めましてITCreate部 部長の山崎です。普段Webのフロントエンドやサーバサイドを触ってます。 FrontendConference2015やGrandFrontEnd2016,Scala関西サミットで学生スタッフのリーダーとかやってました。
+			</p>
+			<h2 id="-javascript-vue-js">シンプルなJavaScriptフレームワークVue.js</h2>
+			<div class="row">
+				<div class="col-xs-7">
+					<p>一年ほど前、いつまでもjQueryだけではダメだと思いAngularやReactを勉強しようと思いました。 しかしディレクティブやディスパッチャーなどわからない単語が多かったり、公式ページが英語だったりと壁が多く挫折してしまいました。 そんな時に出会ったのがVue.jsです。
+					</p>
+				</div>
+				<div class="col-xs-5 img-col">
+					<div class="thumbnail">
+						<img src="https://drive.google.com/uc?export=view&id=0B4ZiWZMCdy8lRTk0WVlBLWRkWk0" alt="">
+						<div class="caption">
+							Vue.js公式サイト(https://jp.vuejs.org/)
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2 id="javascript-">JavaScriptフレームワークの入門に最適！！</h2>
+			<p>いつも周りの人におすすめしているのですが、Vue.jsの基本的な役割は双方向バインディングだけとシンプルなフレームワークなのでJavaScriptフレームワーク初心者の方でも学習しやすいです。 また公式ドキュメントの和訳がしっかりしているので英語が苦手な方でも大丈夫です。
+			</p>
+			<p>表示したい部分には{{ 変数 }}、フォームにv-mode=&quot;変数&quot; とするだけで双方向バインディングができます。
+			</p>
+		</div>
+	</div>
+	<div class="page">
+		<div class="block">	
+				<pre><code class="lang-main.js">import Vue from &#39;vue&#39;
+
+const app = new Vue({
+    el: &#39;#app&#39;,
+    data: {
+        msg: &#39;Hello!&#39;
+    }
+})
+</code></pre>
+			<pre><code class="lang-index.html">&lt;body&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        {{ msg }}
+        &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>			
+			<h2 id="-">柔軟な拡張性</h2>
+			<p>Vue.jsは双方向バインディングのサポートしかしてないのですが、公式ライブラリなど使用することで様々な規模のアプリケーションを作成することができます。</p>
+			<h3 id="spa">SPA</h3>
+			<p>vue-routerを利用することで最近流行りのシングルページアプリケーションを作成することができます。</p>
+			<pre><code>npm install vue-router
+</code></pre>
+			<h3 id="flux-">Fluxアーキテクチャ</h3>
+			<p>規模が大きくなり複雑なアプリケーションになった場合はFluxライクなライブラリVuexを使います。</p>
+			<pre><code>npm install vuex
+</code></pre>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="block">
+			<h2 id="-vue-">テンプレート、スタイル、スクリプトをまとめてくれるvueファイル</h2>
+			<p>Vue.jsでは.vueという拡張子のファイルを使用することができます。 コンポーネントの要素であるテンプレート、スタイル、スクリプトを一つのファイルにまとめることができます。
+			</p>
+			<pre><code class="lang-App.vue">&lt;template&gt;
+    ここにテンプレート
+&lt;/template&gt;
+
+&lt;style scoped&gt;
+    ここにスタイル
+    scopedをつけるとこのコンポーネント内だけで有効なCSSになります。
+&lt;/style&gt;
+
+&lt;script&gt;
+    ここにスクリプト
+&lt;/script&gt;
+</code></pre>
+			<p>ただvueファイルを使用する場合はwebpackやbrowserifyを利用する必要があります。</p>
+			<h2 id="-vue-js-">コマンド一つでVue.jsを始める</h2>
+			<p>初心者の壁になる一つがGulpなどのタスクランナーやwebpackなどのビルドツールです。 フレームワークを使って何か作りたいのにツールの設定方法などを勉強しないといけないのはもどかしいですよね。 Vue.jsではwebpackの設定やディレクトリ構成などをコマンド一つでしてくれるvue-cliというものがあるのですぐにVue.jsを使うことができます。
+			</p>
+			<pre><code>npm install -g vue-cli
+</code></pre>
+			<pre><code>vue init webpack-simple#1.0 プロジェクト名
+</code></pre>
+			<p>※webpack-simpleのあとに#1.0とつけない場合はvue2.0が入ります。</p>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="block">
+			<h2 id="vue-js-">Vue.jsが新しく！</h2>
+			<p>2016/10/1にVue.jsのバージョンが1.0から2.0になりました！ドキュメントの和訳はまだなのですが（11月中ぐらいには和訳されるらしい） Vue2.0では仮装DOMやサーバーサイドレンダリングなどが実装され速度の向上やSPAならではのSEO問題が解決されました。
+				またVue1.0との互換性がよくほぼそのままのコードでVue2.0を動かすことができます。
+			</p>
+			<h2 id="-">まとめ</h2>
+			<p>シンプルで学習しやすいVue.jsですが万能というわけではありません。Vue.jsからJavaScriptフレームワークを学んでもらい慣れたあとAngulerやReactなどのフレームワークを学習するのがいいのではと私は思っています。</p>
+			<p>今回KOFに出展しているMeetMapという作品もVue.jsを使用していますので是非見に来てください。 また私のGitHubにてVue.jsで作ったToDoアプリ、Vue2.0のSPAアプリを公開しているので学習の参考に使っていただけるとありがたいです。
+			</p>
+			<p>ToDoアプリ:<a href="https://github.com/44x1carbon/todo-vue">https://github.com/44x1carbon/todo-vue</a><br> 
+			SPAアプリ:<a href="https://44x1carbon.github.io/vue2-spa/#/search">https://44x1carbon.github.io/vue2-spa/#/search</a></p>
+		</div>
+	</div>
+	</article>
