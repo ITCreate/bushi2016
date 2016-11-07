@@ -78,3 +78,6 @@
 .yellow .article-header {
 	background-color: #F6F7E6 !important;
 }
+.yellow .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th {
+	padding: 4px 8px; 
+}
