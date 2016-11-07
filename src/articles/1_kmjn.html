@@ -1,4 +1,3 @@
-
 <article class="yellow">
 	<div class="page">
 		<div class="article-header-cover">
@@ -8,52 +7,50 @@
 			</div>
 		</div>
 		<div class="block">
-		<h2 id="hid-">HIDとは</h2>
-		<p>HIDとは、ヒューマン・インタフェース・デバイス (Human Interface Device)の略語です。コンピュータに接続される、キーボードやマウスなどの入力機器などの総称です。今回はその中でも日常生活での利用頻度がとても高いUSBのHIDクラスの紹介を行おうと思います。</p>
-		<h2 id="usb-hid-">USB HIDクラス</h2>
-		<p>キーボードについているUSBケーブルをPCに刺すと、特別なドライバ等もインストールせずに使用できるようになると思います。Windows・Linux・BSDなどに始まるOSはもちろん、BIOS画面でも使用できます。これは、世界中のUSBキーボードとOSがHIDクラスに準拠しているからです。
-			USBデバイスがコンピュータに挿入されると、最初に&quot;レポートディスクリプタ&quot;という情報をホストマシンに送信します。このレポートディスクリプタがHIDを理解する上で重要な情報となります。例えばキーボードの場合は、要約すると以下のような情報が送信されています。
-		</p>
-		<div class="row">
-			<div class="col-xs-5">
-				<ul>
-					<li>修飾キー(Ctrl, Alt, Shift等)の種類と数</li>
-					<li>LEDの数</li>
-					<li>キーの種類と数</li>
-					<li>上の項目のそれぞれのBit数・配列か</li>
-				</ul>
-				レポートディスクリプタがOSに認識されると、デバイスとしての機能を持つようになります。<br>
-				ではここから、その情報を読み解いていきましょう。
-			</div>
-			<div class="col-xs-7">
-				<div class="thumbnail">
-					<img src="https://i.imgur.com/3GerYaF.png" alt="">  			
+			<h2 id="hid-">HIDとは</h2>
+			<p>HIDとは、ヒューマン・インタフェース・デバイス (Human Interface Device)の略語です。コンピュータに接続される、キーボードやマウスなどの入力機器などの総称です。今回はその中でも日常生活での利用頻度がとても高いUSBのHIDクラスの紹介を行おうと思います。</p>
+			<h2 id="usb-hid-">USB HIDクラス</h2>
+			<p>キーボードについているUSBケーブルをPCに刺すと、特別なドライバ等もインストールせずに使用できるようになると思います。Windows・Linux・BSDなどに始まるOSはもちろん、BIOS画面でも使用できます。これは、世界中のUSBキーボードとOSがHIDクラスに準拠しているからです。 USBデバイスがコンピュータに挿入されると、最初に&quot;レポートディスクリプタ&quot;という情報をホストマシンに送信します。このレポートディスクリプタがHIDを理解する上で重要な情報となります。例えばキーボードの場合は、要約すると以下のような情報が送信されています。
+			</p>
+			<div class="row">
+				<div class="col-xs-5">
+					<ul>
+						<li>修飾キー(Ctrl, Alt, Shift等)の種類と数</li>
+						<li>LEDの数</li>
+						<li>キーの種類と数</li>
+						<li>上の項目のそれぞれのBit数・配列か</li>
+					</ul>
+					レポートディスクリプタがOSに認識されると、デバイスとしての機能を持つようになります。<br> ではここから、その情報を読み解いていきましょう。
+				</div>
+				<div class="col-xs-7">
+					<div class="thumbnail">
+						<img src="https://i.imgur.com/3GerYaF.png" alt="">
+					</div>
 				</div>
 			</div>
-		</div>				
 		</div>
 	</div>
 
 	<div class="page">
 		<div class="block">
-				<h2 id="-">レポートディスクリプタの確認方法</h2>
-				<div class="row">
-					<div class="col-xs-6">
-						<p>
-							レポートディスクリプタを見るためにUSBスニファの <code>USBlyzer</code> を使用しました。200ドルほどで購入できます。今回は体験版を使用してみます。文字化け等も混じって、大変良い雰囲気です。多分他にもいい方法があるとは思いますが、これを使います。
-						</p>
-						<p>
-							DeviceTreeからキーボードを選択してプロパティを確認してみましょう。今回は <code>Realforce 104UB</code>					のレポートディスクリプタを確認します。
-						</p>
-					</div>
-					<div class="col-xs-6">
-						<div class="thumbnail">
-							<img src="https://i.imgur.com/KAZiyZ2.png" alt=""> 
-						</div>
+			<h2 id="-">レポートディスクリプタの確認方法</h2>
+			<div class="row">
+				<div class="col-xs-6">
+					<p>
+						レポートディスクリプタを見るためにUSBスニファの <code>USBlyzer</code> を使用しました。200ドルほどで購入できます。今回は体験版を使用してみます。文字化け等も混じって、大変良い雰囲気です。多分他にもいい方法があるとは思いますが、これを使います。
+					</p>
+					<p>
+						DeviceTreeからキーボードを選択してプロパティを確認してみましょう。今回は <code>Realforce 104UB</code> のレポートディスクリプタを確認します。
+					</p>
+				</div>
+				<div class="col-xs-6">
+					<div class="thumbnail">
+						<img src="https://i.imgur.com/KAZiyZ2.png" alt="">
 					</div>
 				</div>
-				
-				<pre><code class="lang-=">Usage Page (Generic Desktop)                          	05 01
+			</div>
+
+			<pre><code class="lang-=">Usage Page (Generic Desktop)                          	05 01
 Usage (Keyboard)                                      	09 06
 Collection (Application)                              	A1 01
     Usage Page (Keyboard/Keypad)                      	05 07
@@ -85,8 +82,7 @@ Collection (Application)                              	A1 01
     Usage Maximum                                     	2A FF 00
     Input (Data,Ary,Abs)                              	81 00
 End Collection                                        	C0
-</code></pre>
-			左側の数値は16進数でのデータ列です。多分現時点では意味がさっぱりだと思うので、これから順を追って説明します。
+</code></pre> 左側の数値は16進数でのデータ列です。多分現時点では意味がさっぱりだと思うので、これから順を追って説明します。
 		</div>
 	</div>
 
@@ -100,41 +96,93 @@ Usage (Keyboard)		09 06
 Collection (Application) 	A1 01
 </code></pre>
 					<p>
-						<code>Usage Page</code> では、使用用途のページを選択します。左下のような種類があります。表1に数個例を示します。 
-						この <code>Generic Desktop Controls</code> の配下に有る使用用途は表2の通りです。この他にも数十定義されています。 
+						<code>Usage Page</code> では、使用用途のページを選択します。左下のような種類があります。表1に数個例を示します。 この <code>Generic Desktop Controls</code> の配下に有る使用用途は表2の通りです。この他にも数十定義されています。
 					</p>
 				</div>
-			</div>				
+			</div>
 			<p>
-				
+
 			</p>
 			<div class="row">
 				<div class="col-xs-6">
 					<h6>表1 Usage Pageの例</h6>
-					<table class="table table-striped table-bordered">						
-						<tr><th>Page ID</th><th>Page Name</th></tr>		
-						<tr><td>00</td><td>Undefined</td></tr>
-						<tr><td>01</td><td><strong>Generic Desktop Controls</strong></td></tr>
-						<tr><td>02</td><td>Simulation Controls</td></tr>
-						<tr><td>03</td><td>VR Controls</td></tr>
-						<tr><td>04</td><td>Sport Controls</td></tr>
-						<tr><td>05</td><td>Game Controls</td></tr>
-						<tr><td>06</td><td>Generic Device Controls</td></tr>
-						<tr><td>07</td><td>Keyboard/Keypad</td></tr>
-						<tr><td>08</td><td>LEDs</td></tr>
+					<table class="table table-striped table-bordered">
+						<tr>
+							<th>Page ID</th>
+							<th>Page Name</th>
+						</tr>
+						<tr>
+							<td>00</td>
+							<td>Undefined</td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td><strong>Generic Desktop Controls</strong></td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Simulation Controls</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>VR Controls</td>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td>Sport Controls</td>
+						</tr>
+						<tr>
+							<td>05</td>
+							<td>Game Controls</td>
+						</tr>
+						<tr>
+							<td>06</td>
+							<td>Generic Device Controls</td>
+						</tr>
+						<tr>
+							<td>07</td>
+							<td>Keyboard/Keypad</td>
+						</tr>
+						<tr>
+							<td>08</td>
+							<td>LEDs</td>
+						</tr>
 					</table>
 				</div>
 				<div class="col-xs-6">
 					<h6>表2 Generic Desctop ControlsのUsageの例</h6>
-					<table class="table table-striped table-bordered">						
-						<tr><th>Usage ID</th><th>Usage Name</th></tr>		
-						<tr><td>00</td><td>Undefined</td></tr>
-						<tr><td>01</td><td><strong>Pointer</strong></td></tr>
-						<tr><td>02</td><td>Mouse</td></tr>
-						<tr><td>03</td><td>Reserved</td></tr>
-						<tr><td>04</td><td>Joystick</td></tr>
-						<tr><td>05</td><td>Game Pad</td></tr>
-						<tr><td>06</td><td><strong>Keyboard<strong></td></tr>
+					<table class="table table-striped table-bordered">
+						<tr>
+							<th>Usage ID</th>
+							<th>Usage Name</th>
+						</tr>
+						<tr>
+							<td>00</td>
+							<td>Undefined</td>
+						</tr>
+						<tr>
+							<td>01</td>
+							<td><strong>Pointer</strong></td>
+						</tr>
+						<tr>
+							<td>02</td>
+							<td>Mouse</td>
+						</tr>
+						<tr>
+							<td>03</td>
+							<td>Reserved</td>
+						</tr>
+						<tr>
+							<td>04</td>
+							<td>Joystick</td>
+						</tr>
+						<tr>
+							<td>05</td>
+							<td>Game Pad</td>
+						</tr>
+						<tr>
+							<td>06</td>
+							<td><strong>Keyboard<strong></td></tr>
 						<tr><td>07</td><td>Keypad</td></tr>
 						<tr><td>08</td><td>Multi-axis Controller</td></tr>
 					</table>
